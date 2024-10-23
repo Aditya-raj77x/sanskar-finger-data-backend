@@ -10,16 +10,8 @@ const userSchema = mongoose.Schema(
             type: String,
             required: false,
         },
-        email: {
-            type: String,
-            required: [false, "email is Required"],
 
-        },
-        mobile: {
-            type: String,
-            required: [false, "mobile is Required"],
 
-        },
         status: {
             type: String,
             default: "Active"
