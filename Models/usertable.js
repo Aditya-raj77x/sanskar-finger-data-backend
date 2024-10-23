@@ -4,21 +4,21 @@ const userSchema = mongoose.Schema(
     {
         first_name: {
             type: String,
-            required: true,
+            required: false,
         },
         last_name: {
             type: String,
-            required: true,
+            required: false,
         },
         email: {
             type: String,
-            required: [true, "email is Required"],
-            unique: [true, "already in database"],
+            required: [false, "email is Required"],
+
         },
         mobile: {
             type: String,
-            required: [true, "mobile is Required"],
-            unique: [true, "already in database"],
+            required: [false, "mobile is Required"],
+
         },
         status: {
             type: String,
