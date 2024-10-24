@@ -15,6 +15,11 @@ const userSchema = mongoose.Schema(
             required: false,
             unique: true
         },
+        mobile: {
+            type: String,
+            required: false, // Make sure this is set to false
+            unique: true
+        },
 
 
         status: {
