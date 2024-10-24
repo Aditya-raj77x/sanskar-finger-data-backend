@@ -10,18 +10,18 @@ const userSchema = mongoose.Schema(
             type: String,
             required: false,
         },
-        email: {
-            type: String,
-            required: false,
-            unique: false,
-            sparse: true,
-        },
-        mobile: {
-            type: String,
-            required: false, // Make sure this is set to false
-            unique: false,
-            sparse: true
-        },
+        // email: {
+        //     type: String,
+        //     required: false,
+        //     unique: false,
+        //     sparse: true,
+        // },
+        // mobile: {
+        //     type: String,
+        //     required: false, // Make sure this is set to false
+        //     unique: false,
+        //     sparse: true
+        // },
 
 
         status: {

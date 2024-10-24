@@ -4,8 +4,6 @@ const createuser = async (req, res) => {
         const {
             first_name,
             last_name,
-            email,
-            mobile,
             fingerprint_key1,
             fingerprint_img1,
             fingerprint_key2,
@@ -16,13 +14,16 @@ const createuser = async (req, res) => {
             fingerprint_img4,
             fingerprint_key5,
             fingerprint_img5,
-
         } = req.body;
+
+        // Validate required fields
+        if (!first_name) {
+            return res.status(400).send({ status: "failed", message: "First name is required." });
+        }
+
         const createuser = new usertable({
             first_name,
             last_name,
-            email,
-            mobile,
             fingerprint_key1,
             fingerprint_img1,
             fingerprint_key2,
@@ -37,10 +38,10 @@ const createuser = async (req, res) => {
 
         const response = await createuser.save();
 
-        res.send({ status: "sucessful", data: response });
+        res.status(201).send({ status: "successful", data: response });
     } catch (errors) {
-        res.send({ status: "faild", errors: errors });
-        console.log("faild", errors);
+        console.error("Error creating user:", errors);
+        res.status(500).send({ status: "failed", errors: errors.message });
     }
 };
 
