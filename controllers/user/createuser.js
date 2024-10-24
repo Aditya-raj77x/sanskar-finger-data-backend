@@ -4,8 +4,7 @@ const createuser = async (req, res) => {
         const {
             first_name,
             last_name,
-            email,
-            mobile,
+
             fingerprint_key1,
             fingerprint_img1,
             fingerprint_key2,
@@ -21,8 +20,7 @@ const createuser = async (req, res) => {
         const createuser = new usertable({
             first_name,
             last_name,
-            email,
-            mobile,
+
             fingerprint_key1,
             fingerprint_img1,
             fingerprint_key2,
