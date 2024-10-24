@@ -13,12 +13,14 @@ const userSchema = mongoose.Schema(
         email: {
             type: String,
             required: false,
-            unique: true
+            unique: false,
+            sparse: true,
         },
         mobile: {
             type: String,
             required: false, // Make sure this is set to false
-            unique: true
+            unique: false,
+            sparse: true
         },
 
 
